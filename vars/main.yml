@@ -1,0 +1,7 @@
+---
+# vars file for felix>
+felix_remote_exe: calico-felix-{{ felix_platform }}
+felix_url: '{{ felix_mirror }}/{{ felix_ver }}/{{ felix_remote_exe }}'
+felix_checksum: '{{ felix_checksums[felix_ver][felix_platform] }}'
+
+felix_ver_exe: calico-felix-{{ felix_ver }}
