@@ -1,21 +1,21 @@
 #!/usr/bin/env sh
-VER=v3.8.0
+VER=v3.9.0
 DIR=~/Downloads
 MIRROR=https://github.com/projectcalico/felix/releases/download/$VER
 
 dl()
 {
-    PLATFORM=$1
-    URL=$MIRROR/calico-felix-$PLATFORM
-    LFILE=$DIR/calico-felix-$PLATFORM-$VER
+    local arch=$1
+    local url=$MIRROR/calico-felix-$arch
+    local lfile=$DIR/calico-felix-$arch-$VER
 
-    if [ ! -e $LFILE ];
+    if [ ! -e $lfile ];
     then
-        wget -q -O $LFILE $URL
+        wget -q -O $lfile $url
     fi
 
-    printf "    # %s\n" $URL
-    printf "    %s: sha256:%s\n" $PLATFORM `sha256sum $LFILE | awk '{print $1}'`
+    printf "    # %s\n" $url
+    printf "    %s: sha256:%s\n" $arch `sha256sum $lfile | awk '{print $1}'`
 }
 
 printf "  %s:\n" $VER
