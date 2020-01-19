@@ -1,9 +1,12 @@
 ---
 # defaults file for felix
-felix_ver: v3.11.1
+felix_ver: v3.11.2
 felix_platform: amd64
 felix_mirror: https://github.com/projectcalico/felix/releases/download
 felix_install_dir: /usr/local/bin
+
+felix_config_dir: /etc/calico
+felix_config_file: felix.cfg
 
 felix_checksums:
   v3.8.0:
@@ -62,3 +65,10 @@ felix_checksums:
     arm64: sha256:3df6f3e04b36022e6ef36537894e1c78991b36693044e42fe1936944e087db71
     # https://github.com/projectcalico/felix/releases/download/v3.11.1/calico-felix-ppc64le
     ppc64le: sha256:0ab3601904058cded43704f38796778e27f5e88148c273b28bb4676e56ef378b
+  v3.11.2:
+    # https://github.com/projectcalico/felix/releases/download/v3.11.2/calico-felix-amd64
+    amd64: sha256:1892609876d2cde9d5e7565a2569d79a5cc4200b3ba8fb6b9367c6b34d8ab89c
+    # https://github.com/projectcalico/felix/releases/download/v3.11.2/calico-felix-arm64
+    arm64: sha256:102c85277f183ddc076eafdb6fe13e615b904763032d55f5e356ad59c020dab8
+    # https://github.com/projectcalico/felix/releases/download/v3.11.2/calico-felix-ppc64le
+    ppc64le: sha256:d845553c9d02379e851062feea20fee1a395f3e48cf822e8910d7e5616f6310b
