@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 DIR=~/Downloads
 APP=felix
 MIRROR=https://github.com/projectcalico/${APP}/releases/download
@@ -8,7 +9,7 @@ dl()
     local ver=$1
     local arch=$2
     local url=$MIRROR/$ver/calico-${APP}-$arch
-    local lfile=$DIR/calico-${ARCH}-$arch-$ver
+    local lfile=$DIR/calico-${APP}-$arch-$ver
 
     if [ ! -e $lfile ];
     then
