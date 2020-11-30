@@ -1,7 +1,10 @@
 ---
 # vars file for felix>
-felix_remote_exe: calico-felix-{{ felix_platform }}
+felix_exe_stem: calico-felix
+felix_remote_exe: '{{ felix_exe_stem }}-{{ felix_platform }}'
 felix_url: '{{ felix_mirror }}/{{ felix_ver }}/{{ felix_remote_exe }}'
 felix_checksum: '{{ felix_checksums[felix_ver][felix_platform] }}'
 
-felix_ver_exe: calico-felix-{{ felix_ver }}
+felix_ver_exe: '{{ felix_exe_stem }}-{{ felix_ver }}'
+felix_install_exe: '{{ felix_install_dir }}/{{ felix_ver_exe }}'
+felix_link: '{{ felix_install_dir }}/{{ felix_exe_stem }}'

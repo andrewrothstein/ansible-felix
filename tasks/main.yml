@@ -9,18 +9,18 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: download
+- name: downloading {{ felix_url }} to {{ felix_install_exe }}
   become: yes
   become_user: root
   get_url:
     url: '{{ felix_url }}'
-    dest: '{{ felix_install_dir }}/{{ felix_ver_exe }}'
+    dest: '{{ felix_install_exe }}'
     checksum: '{{ felix_checksum }}'
     mode: 0755
-- name: link
+- name: linking {{ felix_link }} to {{ felix_install_exe }}
   become: yes
   become_user: root
   file:
-    src: '{{ felix_install_dir }}/{{ felix_ver_exe }}'
-    dest: '{{ felix_install_dir }}/calico-felix'
+    src: '{{ felix_install_exe }}'
+    dest: '{{ felix_link }}'
     state: link
