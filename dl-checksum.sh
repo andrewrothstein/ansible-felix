@@ -28,4 +28,4 @@ dl_ver() {
     dl $ver ppc64le
 }
 
-dl_ver ${1:-v3.17.3}
+dl_ver ${1:-v3.18.0}
