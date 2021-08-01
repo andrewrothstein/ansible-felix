@@ -1,6 +1,6 @@
 andrewrothstein.felix
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-felix.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-felix)
+![Build Status](https://github.com/andrewrothstein/ansible-felix/actions/workflows/build.yml/badge.svg)
 
 Installs [Felix](https://github.com/projectcalico/felix) from Project Calico
 
