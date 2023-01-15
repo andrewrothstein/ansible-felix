@@ -1,5 +1,6 @@
 ---
-# vars file for felix>
+# vars file for felix
+felix_platform: '{{ felix_arch_map[ansible_architecture] }}'
 felix_exe_stem: calico-felix
 felix_remote_exe: '{{ felix_exe_stem }}-{{ felix_platform }}'
 felix_url: '{{ felix_mirror }}/{{ felix_ver }}/{{ felix_remote_exe }}'
